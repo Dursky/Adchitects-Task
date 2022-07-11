@@ -24,6 +24,7 @@ export const Header = () => (
 				content="Contact us"
 				style={{
 					marginRight: 64,
+					lineHeight: "24px",
 				}}
 			/>
 		</div>

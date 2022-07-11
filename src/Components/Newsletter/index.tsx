@@ -9,6 +9,8 @@ export const Newsletter = () => (
 			flexDirection: "column",
 			paddingLeft: 388,
 			paddingRight: 388,
+			paddingTop: 128,
+			paddingBottom: 128,
 		}}>
 		<p
 			style={{
@@ -16,11 +18,16 @@ export const Newsletter = () => (
 				fontSize: 40,
 				textAlign: "center",
 				lineHeight: "56px",
-				paddingTop: 128,
 			}}>
 			Sign up for Newsletter
 		</p>
-		<div style={{display: "flex", flexDirection: "row", marginTop: 20}}>
+		<div
+			style={{
+				display: "flex",
+				flexDirection: "row",
+				marginTop: 20,
+				justifyContent: "center",
+			}}>
 			<input
 				placeholder="Type your email"
 				style={{
@@ -30,9 +37,12 @@ export const Newsletter = () => (
 					border: "none",
 					color: "black",
 					width: "100%",
+					marginRight: 16,
 				}}
 			/>
-			<Button content="Submit" />
+			<div style={{width: 192}}>
+				<Button content="Submit" />
+			</div>
 		</div>
 		<p
 			style={{
