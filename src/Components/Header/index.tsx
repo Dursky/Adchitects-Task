@@ -24,12 +24,6 @@ export const Header = () => (
 				content="Contact us"
 				style={{
 					marginRight: 64,
-					width: 192,
-					height: 48,
-					backgroundColor: "#DAC2F2",
-					borderRadius: 48,
-					border: "none",
-					fontSize: 16,
 				}}
 			/>
 		</div>
