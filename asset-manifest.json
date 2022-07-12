@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/Dursky/Adchitects-Task/static/css/main.e6c13ad2.css",
+    "main.js": "/Dursky/Adchitects-Task/static/js/main.43e1211b.js",
+    "static/js/787.97f3cd8d.chunk.js": "/Dursky/Adchitects-Task/static/js/787.97f3cd8d.chunk.js",
+    "index.html": "/Dursky/Adchitects-Task/index.html",
+    "main.e6c13ad2.css.map": "/Dursky/Adchitects-Task/static/css/main.e6c13ad2.css.map",
+    "main.43e1211b.js.map": "/Dursky/Adchitects-Task/static/js/main.43e1211b.js.map",
+    "787.97f3cd8d.chunk.js.map": "/Dursky/Adchitects-Task/static/js/787.97f3cd8d.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.e6c13ad2.css",
+    "static/js/main.43e1211b.js"
+  ]
+}
