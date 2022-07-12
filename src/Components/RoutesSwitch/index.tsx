@@ -13,8 +13,8 @@ export const RoutesSwitch = () => {
 
 	return (
 		<>
-			{data?.map((item) => (
-				<Routes>
+			{data?.map((item, key) => (
+				<Routes key={key}>
 					<Route path={item.url} element={<HomePage id={item.id} />} />
 				</Routes>
 			))}
