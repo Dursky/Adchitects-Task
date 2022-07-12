@@ -1,9 +1,10 @@
 import axios from "axios";
 
+const mainUrl = `https://${process.env.REACT_APP_API_SUB_DOMAIN}.${process.env.REACT_APP_API_DOMAIN_SERVER}.com`;
 class _homePageService {
 	getPages() {
 		return axios
-			.get("https://adchitects-cms.herokuapp.com/pages", {
+			.get(`${mainUrl}/pages`, {
 				auth: {
 					username: "adchitects",
 					password: "jsrulezzz",
@@ -14,7 +15,7 @@ class _homePageService {
 
 	getPage(id: string) {
 		return axios
-			.get(`https://adchitects-cms.herokuapp.com/page/${id}`, {
+			.get(`${mainUrl}/page/${id}`, {
 				auth: {
 					username: "adchitects",
 					password: "jsrulezzz",
@@ -25,7 +26,7 @@ class _homePageService {
 	postNewsletter(email: string) {
 		return axios
 			.post(
-				`https://adchitects-cms.herokuapp.com/newsletter`,
+				`${mainUrl}/newsletter`,
 				{
 					email,
 				},
@@ -37,7 +38,6 @@ class _homePageService {
 				},
 			)
 			.then((res) => res.data);
-		//	.catch((err) => err);
 	}
 }
 

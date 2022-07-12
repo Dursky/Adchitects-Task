@@ -12,7 +12,7 @@ export const Newsletter = () => {
 	const [error, setError] = useState<string>("");
 	const {refetch, isSuccess, isError, isLoading} = useNewsletter(email);
 
-	const handleSubmit = () => {
+	const handleSuccess = () => {
 		schema
 			.validate({
 				email,
@@ -65,7 +65,7 @@ export const Newsletter = () => {
 					onChange={(e) => setEmail(e.target.value)}
 				/>
 				<div style={{width: 192}}>
-					<Button content="Submit" onClick={handleSubmit} loading={isLoading} />
+					<Button content="Submit" onClick={handleSuccess} loading={isLoading} />
 				</div>
 			</div>
 			{isSuccess && !error && (
