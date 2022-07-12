@@ -1,10 +1,14 @@
 import React from "react";
 import {assetsPath} from "Common";
+import {quoteSection} from "Common";
 
-export const QuoteSection = () => (
+export interface Props {
+	section: quoteSection;
+}
+
+export const QuoteSection = ({section: {author, text}}: Props) => (
 	<div
 		style={{
-			marginTop: 152,
 			backgroundColor: "#231E1E",
 			paddingTop: 128,
 			paddingBottom: 128,
@@ -13,13 +17,9 @@ export const QuoteSection = () => (
 		}}>
 		<div>
 			<img alt="quotation mark" src={`${assetsPath}/quotation-mark.svg`} />
-			<p style={{color: "#F1F0F0", fontSize: 24, lineHeight: "40px"}}>
-				Torquatos nostros? quos dolores eos, qui studiose antiqua persequeris, claris et quasi
-				naturalem. In quo enim inter mediocrem animadversionem atque insitam in malis dolor, non
-				numquam. At vero eos et dolore suo sanciret.
-			</p>
+			<p style={{color: "#F1F0F0", fontSize: 24, lineHeight: "40px"}}>{text}</p>
 			<p style={{lineHeight: "29px", color: "#989898", marginTop: 96, textAlign: "left"}}>
-				John Doe, Street Artist
+				{author}
 			</p>
 		</div>
 	</div>

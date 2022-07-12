@@ -1,6 +1,10 @@
 import React from "react";
+import {imageSection} from "Common";
+export interface Props {
+	section: imageSection;
+}
 
-export const ImageSection = () => (
+export const ImageSection = ({section: {img, text}}: Props) => (
 	<div
 		style={{
 			display: "flex",
@@ -8,6 +12,7 @@ export const ImageSection = () => (
 			paddingRight: 172,
 			alignItems: "center",
 			marginTop: 128,
+			marginBottom: 152,
 		}}>
 		<div style={{marginRight: 24, width: "100%"}}>
 			<p
@@ -19,13 +24,12 @@ export const ImageSection = () => (
 					lineHeight: "64px",
 					paddingRight: 50,
 				}}>
-				In oculis quidem rerum facilis est et aperta.
+				{text}
 			</p>
 		</div>
 		<div
 			style={{
-				background:
-					'url("https://marvel-live.freetls.fastly.net/canvas/2021/12/6200eedd9afa4115a6b4fe0b5e611b5f?quality=95&fake=.png")',
+				background: `url("${img}")`,
 				width: "100%",
 				height: 384,
 				backgroundPosition: "center center",

@@ -1,16 +1,18 @@
 import React from "react";
-import {Header} from "Components/Header";
-import {ImageSection} from "Components/ImageSection";
-import {QuoteSection} from "Components/QuoteSection";
-import {Newsletter} from "Components/Newsletter";
+import {QueryClient, QueryClientProvider} from "react-query";
+import {BrowserRouter as Router} from "react-router-dom";
+import {RoutesSwitch} from "Components/RoutesSwitch";
 
-const App = () => (
-	<>
-		<Header />
-		<ImageSection />
-		<QuoteSection />
-		<Newsletter />
-	</>
-);
+const queryClient = new QueryClient();
+
+const App = () => {
+	return (
+		<QueryClientProvider client={queryClient}>
+			<Router>
+				<RoutesSwitch />
+			</Router>
+		</QueryClientProvider>
+	);
+};
 
 export default App;
