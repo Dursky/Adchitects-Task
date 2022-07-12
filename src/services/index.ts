@@ -1,6 +1,6 @@
 import axios from "axios";
 
-class _pageService {
+class _homePageService {
 	getPages() {
 		return axios
 			.get("https://adchitects-cms.herokuapp.com/pages", {
@@ -22,8 +22,25 @@ class _pageService {
 			})
 			.then((res) => res.data);
 	}
+	postNewsletter(email: string) {
+		return axios
+			.post(
+				`https://adchitects-cms.herokuapp.com/newsletter`,
+				{
+					email,
+				},
+				{
+					auth: {
+						username: "adchitects",
+						password: "jsrulezzz",
+					},
+				},
+			)
+			.then((res) => res.data);
+		//	.catch((err) => err);
+	}
 }
 
-const pageService = new _pageService();
+const homePageService = new _homePageService();
 
-export {pageService, _pageService};
+export {homePageService, _homePageService};

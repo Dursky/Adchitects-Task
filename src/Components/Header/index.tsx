@@ -4,10 +4,10 @@ import {Link} from "Components/Link";
 import {assetsPath} from "Common";
 import {Divider} from "Components/Divider";
 import {usePages} from "queries";
+import {LoadingSpinner} from "Components/Loading";
 
 export const Header = () => {
 	const {data, isLoading} = usePages();
-	console.log(data, isLoading);
 	return (
 		<>
 			<div style={{display: "flex", justifyContent: "space-between", marginTop: 24}}>
@@ -18,9 +18,8 @@ export const Header = () => {
 						src={`${assetsPath}/logo.svg`}
 					/>
 					<div style={{display: "flex", justifyContent: "space-between", gap: 48, marginLeft: 97}}>
-						{data?.map((item, key: number) => (
-							<Link content={item.url} key={key} />
-						))}
+						{isLoading && <LoadingSpinner />}
+						{!isLoading && data?.map((item, key: number) => <Link content={item.url} key={key} />)}
 					</div>
 				</div>
 				<Button

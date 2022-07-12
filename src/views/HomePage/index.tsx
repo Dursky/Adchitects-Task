@@ -5,6 +5,7 @@ import {QuoteSection} from "Components/QuoteSection";
 import {Newsletter} from "Components/Newsletter";
 import {usePage} from "queries";
 import {imageSection, quoteSection} from "Common";
+import {Loading} from "Components/Loading";
 
 export interface Props {
 	id: string;
@@ -12,21 +13,19 @@ export interface Props {
 
 export const HomePage = ({id}: Props) => {
 	const {data, isLoading} = usePage(id);
-	console.log(data, isLoading);
 
-	//TODO: Add loading screen
 	if (isLoading) {
-		return <h1>...Loading</h1>;
+		return <Loading />;
 	}
 
 	return (
 		<>
 			<Header />
-			{data?.sections.map((section) =>
+			{data?.sections.map((section, key) =>
 				"img" in section ? (
-					<ImageSection section={section as imageSection} />
+					<ImageSection section={section as imageSection} key={key} />
 				) : (
-					<QuoteSection section={section as quoteSection} />
+					<QuoteSection section={section as quoteSection} key={key} />
 				),
 			)}
 

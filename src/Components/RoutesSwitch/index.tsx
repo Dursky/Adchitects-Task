@@ -2,13 +2,13 @@ import React from "react";
 import {Route, Routes} from "react-router-dom";
 import {HomePage} from "views/HomePage";
 import {usePages} from "queries";
+import {Loading} from "Components/Loading";
 
 export const RoutesSwitch = () => {
 	const {data, isLoading} = usePages();
 
-	//TODO: Add loading screen
 	if (isLoading) {
-		return <h1>...Loading</h1>;
+		return <Loading />;
 	}
 
 	return (
