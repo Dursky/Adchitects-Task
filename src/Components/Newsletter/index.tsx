@@ -58,7 +58,7 @@ export const Newsletter = () => {
 						borderRadius: 24,
 						padding: 14,
 						border: "none",
-						color: "black",
+						color: "red",
 						width: "100%",
 						marginRight: 16,
 					}}

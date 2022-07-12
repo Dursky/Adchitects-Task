@@ -1,4 +1,5 @@
 import React from "react";
+import "./App.css";
 import {QueryClient, QueryClientProvider} from "react-query";
 import {HashRouter} from "react-router-dom";
 import {RoutesSwitch} from "Components/RoutesSwitch";
