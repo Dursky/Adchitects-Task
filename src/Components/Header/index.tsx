@@ -8,6 +8,7 @@ import {LoadingSpinner} from "Components/Loading";
 
 export const Header = () => {
 	const {data, isLoading} = usePages();
+
 	return (
 		<>
 			<div style={{display: "flex", justifyContent: "space-between", marginTop: 24}}>
